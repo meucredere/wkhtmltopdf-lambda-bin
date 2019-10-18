@@ -9,4 +9,4 @@ jobs:
     
     steps:
     - name: Install dependencies
-      run: apt install python-yaml
+      run: sudo apt install python-yaml
