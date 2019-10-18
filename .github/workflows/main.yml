@@ -8,5 +8,16 @@ jobs:
     runs-on: ubuntu-18.04
     
     steps:
-    - name: Install dependencies
-      run: sudo apt install python-yaml
+    - name: Build
+      run: |
+        mkdir wkhtmltopdf-build && cd wkhtmltopdf-build
+        git clone git@github.com:wkhtmltopdf/packaging.git
+        git clone git@github.com:wkhtmltopdf/wkhtmltopdf.git
+        cd wkhtmltopdf
+        git submodule init
+        git submodule update
+        cd ../packaging
+        ./build docker-images centos6-x86_64
+        ./build compile-docker amazonLinux64 ../wkhtmltopdf wkhtmltopdf-bin
+        zip -r wkhtmltopdf.zip wkhtmltopdf
+        
