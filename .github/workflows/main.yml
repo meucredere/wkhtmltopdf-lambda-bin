@@ -11,8 +11,8 @@ jobs:
     - name: Build
       run: |
         mkdir wkhtmltopdf-build && cd wkhtmltopdf-build
-        git clone git@github.com:wkhtmltopdf/packaging.git
-        git clone git@github.com:wkhtmltopdf/wkhtmltopdf.git
+        git clone https://github.com/wkhtmltopdf/packaging.git
+        git clone https://github.com/wkhtmltopdf/wkhtmltopdf.git
         cd wkhtmltopdf
         git submodule init
         git submodule update
