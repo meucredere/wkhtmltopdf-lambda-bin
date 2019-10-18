@@ -19,5 +19,6 @@ jobs:
         cd ../packaging
         ./build docker-images centos6-x86_64
         ./build compile-docker centos6-x86_64 ../wkhtmltopdf wkhtmltopdf-bin
+        cd wkhtmltopdf-bin/wkhtmltox/bin
         zip -r wkhtmltopdf.zip wkhtmltopdf
         
