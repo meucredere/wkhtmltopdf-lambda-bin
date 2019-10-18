@@ -18,6 +18,6 @@ jobs:
         git submodule update
         cd ../packaging
         ./build docker-images centos6-x86_64
-        ./build compile-docker amazonLinux64 ../wkhtmltopdf wkhtmltopdf-bin
+        ./build compile-docker centos6-x86_64 ../wkhtmltopdf wkhtmltopdf-bin
         zip -r wkhtmltopdf.zip wkhtmltopdf
         
